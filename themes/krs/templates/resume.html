@@ -6,7 +6,316 @@
 {% endblock head %}
 
 {% block content %}
-    <object data="Resume_Kevin_Sprong_2015.pdf" type="application/pdf" width="100%" height="650px">
-        <embed src="Resume_Kevin_Sprong_2015.pdf" type="application/pdf" width="100%" height="650px"/>
-    </object>
+      <!-- header -->
+      <div id="resheader">
+        <div id="maintitle">
+          Kevin Sprong
+        </div>
+        <div id="contact">
+          Waltham, MA<br>
+          kevin (at) kevinsprong.com<br>
+          617-838-8727
+        </div>
+        <div id="tagline">
+          <a href="Resume_Kevin_Sprong_2015.pdf" download>Download as PDF</a>
+        </div>
+      </div>
+    
+    
+      <!-- objective at top 
+      <div id="objective" class="mainsection">
+  
+        <h3>Objective</h3> 
+  
+        <div class="subsection">  
+          To solve complex, impactful problems using software engineering and insights from data.
+        </div>
+      </div>
+      -->
+    
+      <!-- computer skills up front - departure from .doc version -->
+      <div id="skills" class="mainsection">
+    
+        <h3>Computer Skills</h3>
+    
+          <div id="skilllist" class="subsection">
+            <strong>Proficient</strong>:  Python, Java, R, Hadoop, Pig, JavaScript, d3, Matlab, Linux<br>
+            <strong>Familiar</strong>:  Clojure, MongoDB, Node, Git, Maven, SQL, LaTeX<br>
+          </div>
+      </div>
+    
+    
+      <!-- work experience -->
+      <div id="workexperience" class="mainsection">
+    
+        <h3>Work Experience</h3>
+    
+        <!-- divider for new subsection of work experience -->
+        <div class="subsection">
+          <div class="companyname">
+            <a href="http://akamai.com" target="_blank">Akamai Technologies</a>
+          </div>
+          <div class="companyloc">
+            Cambridge, MA
+          </div>
+          <div class="companydates">
+            April 2015 - Present
+          </div>
+          <div class="mytitle">
+            Senior Performance Engineer
+          </div>
+          <div class="normaltext">
+          </div>
+        </div>
+        
+        <!-- divider for new subsection of work experience -->
+        <div class="subsection">
+          <div class="companyname">
+            <a href="http://www.mitre.org/centers/center-for-advanced-aviation-system-development/who-we-are" target="_blank">The MITRE Corporation</a>
+          </div>
+          <div class="companyloc">
+            Bedford, MA
+          </div>
+          <div class="companydates">
+            2013 - 2015
+          </div>
+          <div class="mytitle">
+            Lead Computer Scientist
+          </div>
+          <div class="normaltext">
+            Performed air traffic system modernization research using Hadoop and related technologies in support of the
+Federal Aviation Administration. Applied a combination of software engineering, mathematical and statistical
+analysis, and web visualization to drive data-mining research questions from idea to final result against large
+datasets.
+            <ul>
+              <li>
+                Developed MapReduce workflow to extract and analyze lateral track deviations during initial departure climb.
+Created interactive web visualization of results to provide a deeper understanding of causal factors. (Java, d3,
+dc.js, Hadoop)
+              </li>
+              <li>
+                Deployed fully automated ETL processes, data models, and web services to turn raw ARINC procedure data
+into modeled objects available as a REST service. (Python, Pig, MongoDB, Node)
+              </li>
+              <li>
+                Produced assessment of airport navigation service needs using data-driven criteria applied to multiple diverse
+datasets. Delivered results via web and desktop applications allowing interactive results exploration and
+sensitivity analysis. (R, Python, Pig, Angular, d3)
+              </li>
+            </ul>
+          </div>
+        </div>
+    
+        <!-- divider for new subsection of work experience -->
+        <div class="subsection">
+          <div class="companyname">
+            <a href="http://www.bbn.com/" target="_blank" >Raytheon BBN Technologies</a>
+          </div>
+          <div class="companyloc">
+            Cambridge, MA
+          </div>
+          <div class="companydates">
+            2010 - 2013
+          </div>
+          <div class="mytitle">
+            Scientist
+          </div>
+          <div class="normaltext">
+            Performed analysis and modeling of sensor system technologies for customers including Defense Advanced Research
+Projects Agency (DARPA). Developed and analyzed signal processing approaches and complex system models,
+conducted field test data collection and processing, and contributed to customer presentations and reports.
+            <ul>
+              <li>
+                Implemented and analyzed coherent localization and probabilistic classification algorithms for transient vibration
+detections, providing solutions to several key customer objectives. (Matlab)
+              </li>
+              <li>
+                Developed parametric model of system response to known signal injection in order to estimate environmental
+parameters. Used non-linear optimization techniques to extract damped sinusoids from noisy data.
+(Matlab/Simulink)
+              </li>
+              <li>
+                Delivered Java software package which converted encoded measurement information into engineering units
+using signal processing techniques for further processing and analysis. (Java)
+              </li>
+            </ul>
+          </div>
+        </div>
+    
+        <!-- divider for new subsection of work experience -->
+        <div class="subsection">
+          <div class="companyname">
+            <a href="http://www.mitre.org/centers/center-for-advanced-aviation-system-development/who-we-are" target="_blank">The MITRE Corporation</a>
+          </div>
+          <div class="companyloc">
+            McLean, VA
+          </div>
+          <div class="companydates">
+            2003 - 2010
+          </div>
+          <div class="mytitle">
+            Project Team Manager
+          </div>
+          <div class="normaltext">
+            Initially hired as a simulation modeling engineer, then successively promoted to senior simulation modeling engineer
+and project team manager at MITRE&#39;s Center for Advanced Aviation Systems Development. As project team
+manager, responsibilities included management of seven engineering staff and approximately $3.5M in research for
+the Federal Aviation Administration.
+            
+            <ul>
+              <li>
+                Managed seven engineering staff developing air traffic control workload and complexity models, providing more
+accurate inputs to FAA staffing models. (Java)
+              </li>
+              <li>
+               Supervised and mentored talented engineering staff, ensured quality of work product deliverables, and provided
+performance assessment and review.
+              </li>
+              <li>
+                Developed software package allowing fast-time generation of aircraft vertical profiles as built by advanced flight
+management systems, with modeled estimates of fuel flow and aircraft emissions, enabling new categories of
+research. (SLX)
+              </li>
+              <li>
+                Developed and applied an airport and aircraft simulation model to analyze annual benefits and capacity gains
+resulting from implementation of advanced navigation procedures. (SLX)
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+    
+      <!-- education -->
+      <div id="education" class="mainsection">
+    
+        <h3>Education</h3>
+    
+        <!-- divider for new education section -->
+        <div class="subsection">
+          <div class="companyname"> <!-- not really a company, but want to use the same CSS -->
+            <a href="http://engineering.jhu.edu/" target="_blank">Johns Hopkins University</a>
+          </div>
+          <div class="companydates">  <!-- this mapping is straightforward too -->
+            2009
+          </div>
+          <div class="companyloc"> <!-- this mapping is straightforward -->
+            Whiting School of Engineering, Baltimore, MD
+          </div>
+          <div class="mytitle"> <!-- this is the degree obtained -->
+            M.S. in Systems Engineering
+          </div>
+          <div class="normaltext">
+            3.80 GPA. <strong>Relevant coursework</strong>: Software Systems Engineering, System Design and Integration, Management of Systems Projects
+          </div>
+        </div>
+    
+    
+        <!-- divider for new education section -->
+        <div class="subsection">
+          <div class="companyname"> <!-- not really a company, but want to use the same CSS -->
+            <a href="http://www.virginia.edu/" target="_blank">University of Virginia</a>
+          </div>
+          <div class="companydates">  <!-- this mapping is straightforward too -->
+            2003
+          </div>
+          <div class="companyloc"> <!-- this mapping is straightforward -->
+            College of Arts and Sciences, Charlottesville, VA
+          </div>
+          <div class="mytitle"> <!-- this is the degree obtained -->
+            B.A. in Mathematics with Distinction
+          </div>
+          <div class="normaltext">
+            3.74 GPA, Phi Beta Kappa. <strong>Relevant coursework</strong>: Operations Research, Linear Algebra, Probability and Statistics, Ordinary Differential Equations, Software Development Methods, Discrete Mathematics
+          </div>
+        </div>
+      </div>
+    
+    
+      <!-- publications --> 
+      <div id="publications" class="mainsection">
+    
+        <h3>Selected Publications</h3>
+    
+        <div class="subsection">
+          <div class="pubauthors">
+            Sprong, K., et al.       
+          </div>
+          <div class="pubconfdate">
+            October 2008
+          </div>
+          <div class="pubtitle">
+            Analysis of Atlantic Interoperability Initiative to Reduce Emissions 
+            (AIRE) Continuous Descent Arrival Operations at Atlanta and Miami
+          </div>
+          <div class="pubconf">
+            27th Digital Avionics Systems Conference
+          </div>
+          <div class="pubconfloc">
+            St. Paul, Minnesota
+          </div>
+        </div>
+    
+        <div class="subsection">
+          <div class="pubauthors">
+            Herndon, A., Mayer, R., Cramer, M., Sprong, K.
+          </div>
+          <div class="pubconfdate">
+            October 2007
+          </div>
+          <div class="pubtitle">
+            Analysis of Advanced Flight Management Systems (FMS), Flight Management 
+            Computer (FMC) Field Observations Trials, Vertical Path
+          </div>
+          <div class="pubconf">
+            26th Digital Avionics Systems Conference
+          </div>
+          <div class="pubconfloc">
+            Dallas, Texas
+          </div>
+        </div>
+      </div>
+    
+    
+      <!-- interests -->
+      <div id="activities" class="mainsection">
+    
+        <h3>Activities</h3>  
+    
+        <div class="subsection">
+          <div class="companyname"> <!-- not really a company, but want to use the same CSS -->
+            Boston Area Disc Alliance
+          </div>
+          <div class="companydates">  <!-- this mapping is straightforward too -->
+            2010 - Present
+          </div>
+          <div class="companyloc"> <!-- this mapping is straightforward -->
+            Boston, MA
+          </div>
+        </div>
+    
+        <div class="subsection">
+          <div class="companyname"> <!-- not really a company, but want to use the same CSS -->
+            Washington Area Flying Disc Club
+          </div>
+          <div class="companydates">  <!-- this mapping is straightforward too -->
+            2003 - 2010
+          </div>
+          <div class="companyloc"> <!-- this mapping is straightforward -->
+            Washington, DC
+          </div>
+        </div>
+        
+        <div class="subsection">
+          <div class="companyname"> <!-- not really a company, but want to use the same CSS -->
+            Phi Sigma Pi National Honor Fraternity
+          </div>
+          <div class="companydates">  <!-- this mapping is straightforward too -->
+            2001 - 2003
+          </div>
+          <div class="companyloc"> <!-- this mapping is straightforward -->
+            University of Virginia
+          </div>
+        </div>
+      </div>
 {% endblock content %}

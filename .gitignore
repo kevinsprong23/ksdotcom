@@ -14,3 +14,4 @@ pelicanconf.py
 publishconf.py
 scripts/stack*.js
 scripts/d3*.js
+cache

@@ -6,26 +6,225 @@ html, body {
 
 /* resume-specific properties */
 #content {
-  width: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #eaeced;
+  color: #2c2c2c;
+  width: 80%;
   max-width: 850px;
   min-width: 304px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 1em;
+  font-size: 16px;
   padding-bottom: 70px;
 }
 
+h3 {
+  display: inline;
+  font-weight: bold;
+  font-size: 22px;
+  float: left;
+  width: 180px;
+}
+
+li {
+  margin-bottom: 3px;
+}
+
+/* set header properties */
+#resheader {
+  display: block;
+  position: relative;
+  width: 96%;
+  padding: 12px 6px 12px 6px;
+  border-bottom: 1px solid #2d2d2d;
+}
+
+#contact {
+  position: absolute;
+  top: 30px;
+  right: 25px;
+  text-align: right;
+  color: #3c3c3c;
+  padding-right: 0;
+  margin-right: 0;
+}
+
+#maintitle {
+  position: relative;
+  padding-left: 2%;
+  padding-top: 2%;
+  display: inline-block;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+#tagline {
+  position: relative;
+  display: block;
+  padding-bottom: 1em;
+  padding-left: 2%;
+  font-size: 16px;
+}
+
+#skilllist {
+  line-height: 1.25em;
+}
+
+/* main section general properties */
+.mainsection {
+  position: relative;
+  display: block;
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-top: 2%;
+  padding-bottom: 5%;
+  border-bottom: 1px dotted #738a9f;
+  overflow: hidden; /* to make the floats work */
+}
+
+.subsection {
+  float: right;
+  text-align: left;
+  width: 70%;
+  left: 30%;
+  padding-top: 3.5%;
+  padding-right: 2%;
+  padding-bottom: 1%;
+}
+
+/* subsection field formatting */
+.companyname {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.companyloc {
+  display: inline-block;
+  font-size: 14px;
+}
+
+.companydates {
+  position: relative;
+  text-align: left;
+  display: block;
+  margin-top: 0;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.mytitle {
+  font-style: italic;
+  margin-bottom: 8px;
+}
+
+#activities {
+  padding-bottom: 30px;
+  border: 0px;
+}
+
+.pubauthors {
+  font-weight: bold;
+  display: inline;
+}
+
+.pubconfdate {
+  text-align: left;
+  display: block;
+  margin-top: 0;
+  font-size: 14px;
+  font-style: italic;
+  padding-bottom: 8px;  
+}
+
+.pubtitle {
+  padding-top: 1%;
+  font-style: italic;
+}
+
+.pubconf {
+  padding-top: 1%;
+}
+
+.pubconfloc {
+  display: none;
+}
+
+/* misc activity formatting */
+#activities .companyname {
+  font-size: 16px;
+}
+
+#activities .companydates {
+  text-align: left;
+  display: block;
+  margin-top: 0;  
+  padding-top: 0%;
+}
+
+#activities .companyloc {
+  display: block;
+}
+
+#activities .normaltext {
+  padding-top: 0.5em;
+  font-size: 14px;
+}
+
 /* media queries for varying browser widths */
+@media screen and (max-width: 996px) {
+  .companyname, .companyloc {
+    display: inline-block;
+  }
+}
+
 @media screen and (max-width: 920px) {
   #content {
     width: 90%;
   }
   
+  h3 {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 0.5%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .companydates, .pubconfdate {
+    text-align: left;
+    display: block;
+  }
+
+  .subsection {
+    float: none;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2%;
+  }
+  
+  #objective .subsection {
+    text-align: center;
+  }  
+  
+  #skills .subsection {
+    text-align: center;
+  }
+
 }
 
 @media screen and (max-width: 680px) {
   #content {
     width: 95%;
+  }
+  .companyname {
+    display: block;
+  }
+  .companyloc {
+    display: block;
+    text-align: left; 
   }
   
 }
@@ -36,4 +235,105 @@ html, body {
     padding-left: 0.5%;
   }
 
+  #maintitle {
+    font-size: 20px;
+    padding-left: 0;
+  }
+  
+  h3 {
+    font-size: 16px;
+  }
+
+  #tagline {
+    font-size: 12px;
+    padding-left: 0;
+  }
+  
+  #contact {
+    top: 8px;
+    right: 15px;
+    font-size: 10px;
+  }
+
+  .mainsection {
+    padding-right: 0;
+    padding-left: 1%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .subsection {
+    font-size: 14px;
+  }
+   
+}
+
+@media print {
+    html, body {
+        background-color: none;   
+    }
+    #header {
+        display: none;
+    }
+    #footer {
+        display: none;
+    }
+    #tagline {
+        display: none;
+    }
+    #content {
+        width: 95%;
+        font-size: 12px;
+    }
+    
+    h3 {
+        font-size: 16px;
+        width: 100%;
+        text-align: center;
+        padding-bottom: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #publications {
+        display:none;
+    }
+    
+    #activities {
+        display:none;
+    }
+    
+    /* misc activity formatting */
+    #activities .companyname {
+        font-size: 14px;
+    }
+
+    #activities .normaltext {
+        font-size: 12px;
+    }
+    
+    .companyname {
+        font-size: 16px;
+    }
+    
+    .companydates {
+        text-align: left;
+        display: block;
+    }
+
+    .subsection {
+        float: none;
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 2%;
+    }
+  
+    #objective .subsection {
+        text-align: center;
+    }  
+  
+    #skills .subsection {
+        text-align: center;
+    }
 }
