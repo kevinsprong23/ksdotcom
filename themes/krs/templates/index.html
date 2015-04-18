@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block head %}
+{{ super() }}
+  <link rel="stylesheet" type="text/css" href="{{ SITEURL }}{{ ROOTDIR }}{{ THEME_STATIC_DIR }}/css/index-style.css"/> 
+  <meta property="og:image" content="{{ SITEURL }}{{ ROOTDIR }}{{ THEME_STATIC_DIR }}/images/ks-ico-small.png"/>      
+  <title>{{ SITENAME }}</title>
+{% endblock head %}
+
+{% block content %}
+
+<h2>Entries from the blog:</h2>
+
+{% for article in (articles_page.object_list if articles_page else articles) %}
+  
+  <div class="post-link">
+    <a href="{{ SITEURL }}{{ ROOTDIR }}{{ article.url }}">
+      <div class="post-header">
+        <h3>{{article.title|striptags}}</h3>     
+      </div>
+      <abbr class="published" title="{{ article.date.isoformat() }}">
+        {{ article.locale_date }}
+      </abbr>
+      <div class="entry-content">
+        <p>{{ article.summary }}</p>
+        <img src="{{ article.ogimage }}" width="550"/>
+      </div>
+    </a>
+  </div>
+  
+{% endfor %}
+
+{% include 'pagination.html' %}
+
+{% endblock content %}

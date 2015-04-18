@@ -1,0 +1,60 @@
+html, body {
+    min-width: 1200px;
+}
+
+/* style the basic elements of the page */
+#content { 
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    padding-left:2em;
+    background-color:#eee;
+    color:#777;
+}
+
+h3 {
+    position: absolute;
+    left: 270px;
+    top:165px;
+}
+
+.slider {
+    position:absolute;
+    top: 760px;
+    left: 600px;
+    font-size:17px;
+    color:#111;
+}
+
+#enplanementButton {
+    position: absolute;
+    top: 760px;
+    left: 150px;
+    font-size: 16px;
+}
+
+/* style the topoJson elements */
+path {
+    stroke-linejoin: round;
+}
+
+.land { 
+    fill: #ccc;
+}
+
+.states {
+    fill: none;
+    stroke: #fff;
+}
+
+/* style the tooltips */
+.d3-tip {
+    font-family: Arial;
+    font-size: 24px;
+    line-height: 1;
+    font-weight: bold;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #ccc;
+    border-radius: 2px;
+}
+

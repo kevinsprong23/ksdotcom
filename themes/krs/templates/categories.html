@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block head %}
+{{ super() }}
+  <link rel="stylesheet" type="text/css" href="{{ SITEURL }}{{ ROOTDIR }}{{ THEME_STATIC_DIR }}/css/taglist-style.css"/>
+{% endblock head %}
+
+{% block content %}
+      <h3>List of article categories:</h3>
+      <div class=".taglist">
+    {%- for category, articles in categories|sort %}
+        <a href="{{ SITEURL }}{{ ROOTDIR }}{{ category.url }}">{{ category }}</a> ({{ articles|count }})
+
+    {% endfor %}
+      </div>
+{% endblock content %}

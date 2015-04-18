@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block head %}
+{{ super() }}
+  <link rel="stylesheet" type="text/css" href="{{ SITEURL }}{{ ROOTDIR }}{{ THEME_STATIC_DIR }}/css/about-style.css"/>
+{% endblock head %}
+
+{% block content %}
+      <div id="about">
+        <h3>About this website</h3>
+        <p>
+          This site will mostly contain thoughts about various things I find 
+          interesting, with a focus on software, data, &amp; analytics. 
+          And, maybe some other things here and there.  
+        </p>
+        <p>
+          Anything I say on this site is my opinion alone and is not endorsed by any 
+          current or previous employer etc. etc. etc.
+        </p>
+        <p>
+          Want to connect?  Follow any of the links at the bottom of the page, or 
+          email me: kevin (at) kevinsprong.com.
+        </p>
+        <p>
+          Want anything I used to make the site?  It&#39;s all freely available from 
+          <a href="https://github.com/kevinsprong23">my github page</a>. 
+        </p>
+        <p>
+          blog powered by <a href="http://blog.getpelican.com" target="_blank">Pelican</a>.
+        </p>
+      </div>
+      <div id="cclic">
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">
+          <img alt="Creative Commons License" style="border-width:0"
+            src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png"/>
+        </a><br>
+        All of the work on kevinsprong.com is licensed under a<br>
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">
+          Creative Commons Attribution-ShareAlike 4.0 International License
+        </a><br>
+        Banner pic by <a href="http://aliciasavage.com/" target="_blank">Alicia Savage Photography</a>
+      </div>
+{% endblock content %}

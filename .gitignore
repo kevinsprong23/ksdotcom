@@ -1,0 +1,16 @@
+fonts/**
+**/*.swp
+**/*.zip
+images/**
+image_backup_no_watermark/**
+projects/secretmenu
+projects/**/*.csv
+projects/**/*.json
+raw_posts/**
+output/**
+outputpublish/**
+__pycache__/**
+pelicanconf.py
+publishconf.py
+scripts/stack*.js
+scripts/d3*.js

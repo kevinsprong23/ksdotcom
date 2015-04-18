@@ -1,0 +1,55 @@
+{% extends "basefullscreen.html" %}
+
+{% block head %}
+{{ super() }}
+  <link rel="stylesheet" type="text/css" href="{{ SITEURL }}{{ ROOTDIR }}projects/d3-filtermap/filtermap-style.css"/>
+  <meta property="og:image" content="{{ SITEURL }}{{ ROOTDIR }}images/projects/d3-filtermap/us-airports.png"/>
+{% endblock head %}
+
+{% block content %}
+    
+    <h3>Passenger Enplanements at U.S. Airports in 2013</h3>
+    <!-- need a blank div for d3 to select and insert content into -->
+    <div id="airportcanvas"></div> 
+
+    <!-- a slider for enplanement selection -->
+    <div class="slider">
+        Passenger Enplanements of at least: <input id="enplanements" style="position:relative;top:3px;" 
+               type="range" min="0" max="44000000" step="10000" value="0"><span id="sliderlabel" style="color:#268bd2"></span>
+    </div>
+
+    <!-- a button for enplanement sizing -->
+    <button id="enplanementButton" onclick="toggleEnplanementAirportSize()">
+        Size By Enplanements
+    </button>
+
+    <p>
+        Data sources: 
+        <a href="http://www.faa.gov/airports/planning_capacity/npias/reports/">FAA</a>, 
+        <a href="https://nfdc.faa.gov/xwiki/bin/view/NFDC/56DaySub-2014-07-24">NFDC</a>
+    </p>
+
+    <p>
+        Source code + writeup: <a href="{{ SITEURL }}{{ ROOTDIR }}posts/2014/08/19/filterable-d3-maps">http://kevinsprong.com/posts/2014/08/19/filterable-d3-maps</a>.
+    </p>
+
+    <!-- dependencies; link to URL's of these, 
+         or download and place in folder -->
+    <script src="{{ SITEURL }}{{ ROOTDIR }}scripts/d3.v3.min.js"></script>
+    <script src="{{ SITEURL }}{{ ROOTDIR }}scripts/d3.tip.js"></script>
+    <script src="{{ SITEURL }}{{ ROOTDIR }}scripts/queue.min.js"></script>
+    <script src="{{ SITEURL }}{{ ROOTDIR }}scripts/topojson.v1.min.js"></script>
+    <script src="{{ SITEURL }}{{ ROOTDIR }}projects/d3-filtermap/plot-airports.js"></script>
+
+    <div class="share-buttons">
+        share this:<br>
+        <a href="https://twitter.com/intent/tweet?text=Filterable+web+based+map+plots+with+d3&url={{ SITEURL }}{{ ROOTDIR }}projects/d3-filtermap" target="_blank"><img src="{{ SITEURL }}{{ ROOTDIR }}{{ THEME_STATIC_DIR }}/images/sharetwitter.png" width="30" height="30"/></a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{ SITEURL }}{{ ROOTDIR }}projects/d3-filtermap" target="_blank"><img src="{{ SITEURL }}{{ ROOTDIR }}{{ THEME_STATIC_DIR }}/images/sharefacebook.png" width="30" height="30"/></a>
+        <a href="https://plus.google.com/share?url={{ SITEURL }}{{ ROOTDIR }}projects/d3-filtermap" target="_blank"><img src="{{ SITEURL }}{{ ROOTDIR }}{{ THEME_STATIC_DIR }}/images/sharegoogleplus.png" width="30" height="30"/></a>
+        <a href="http://www.linkedin.com/shareArticle?mini=true&url={{ SITEURL }}{{ ROOTDIR }}projects/d3-filtermap&title=Filterable+web+based+map+plots+with+d3&summary=Filterable+web+based+map+plots+with+d3&source={{SITENAME}}" target="_blank"><img src="{{ SITEURL }}{{ ROOTDIR }}{{ THEME_STATIC_DIR }}/images/sharelinkedin.png" width="30" height="30"/></a>
+      </div>
+
+{% endblock content %}
+
+
+

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+@import url(http://fonts.googleapis.com/css?family=Cabin:600);
+
+section {
+  background: #222222;
+  color: #eeeeee;
+  padding: 2em;
+  font-family: "Cabin", Arial, sans-serif;
+}
+
+a:link,
+a:visited {
+  color: #268bd2;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  position: absolute;
+  bottom: 10px;
+  right: 30px;
+  text-align: right;
+  color: #268bd2;
+  font-size: 70%;
+}
+
+</style>
+
+<section style="text-align:center;padding-top:5em;">
+  <p style="font-size:200%;">My game playing bot
+  <p style="font-size: 70%;">These slides were made with <a href="https://github.com/mbostock/stack">Stack.js</a><br>Scroll up/down with arrow keys to navigate
+  <p class="footer">kevinsprong.com
+</section>
+
+<section style="text-align:center;padding-top:5em;">
+  <p style="font-size:400%;">The code
+  <p class="footer">kevinsprong.com
+</section>
+
+<section style="text-align:left;padding-top:1em;padding-left:2em;">
+  <p>Written in Java
+  <p>~4400 lines of code
+  <img src="http://kevinsprong.com/images/projects/gamesolver/CodeSnippet.jpeg" style="position: absolute; bottom: 2.2em; right: 2em; width:80%; height: auto;"/>
+  <p class="footer">kevinsprong.com
+</section>
+
+<section style="text-align:center;padding-top:5em;">
+  <p style="font-size:400%;">Algorithm
+  <p class="footer">kevinsprong.com
+</section>
+
+<section style="text-align:left;padding-top:1em;padding-left:2em;">
+  <p><a href="http://en.wikipedia.org/wiki/Alpha%E2%80%93beta_pruning">Alpha-Beta Pruning</a> allows efficient search over all possible moves and responses
+  <p>It assumes the computer will make the best move at each opportunity and responds accordingly</p>
+  <svg width=100% height=100%>
+    <line x1=55% y1=5% x2=45% y2=25% style="stroke:rgb(200,200,200); stroke-width:2" />
+    <line x1=55% y1=5% x2=65% y2=25% style="stroke:rgb(200,200,200); stroke-width:2" />
+    <line x1=45% y1=25% x2=40% y2=50% style="stroke:rgb(200,200,200); stroke-width:2" />
+    <line x1=45% y1=25% x2=50% y2=50% style="stroke:rgb(200,200,200); stroke-width:2" />
+    <circle cx=55% cy=5% r=0.75em stroke=#268bd2 stroke-width="5" fill=#222222 />
+    <circle cx=45% cy=25% r=0.75em stroke=#dc322f stroke-width="5" fill=#222222 />
+    <circle cx=65% cy=25% r=0.75em stroke=#dc322f stroke-width="5" fill=#222222 />
+    <circle cx=40% cy=50% r=0.75em stroke=#268bd2 stroke-width="5" fill=#222222 />
+    <circle cx=50% cy=50% r=0.75em stroke=#268bd2 stroke-width="5" fill=#222222 />
+    <text x=54.25% y=6.5% fill=rgb(200,200,200)>5</text>
+    <text x=44.25% y=26.5% fill=rgb(200,200,200)>5</text>
+    <text x=64.25% y=26.5% fill=rgb(200,200,200)>9</text>
+    <text x=39.25% y=51.5% fill=rgb(200,200,200)>5</text>
+    <text x=49.25% y=51.5% fill=rgb(200,200,200)>4</text>
+  </svg>
+  <p class="footer">kevinsprong.com
+</section>
+
+<section style="text-align:left;padding-top:1em;padding-left:2em;">
+  <p style="font-size:400%; color:#ebc22c;">2048
+  <img src="http://kevinsprong.com/images/projects/gamesolver/2048.jpeg" style="position: absolute; bottom: 40%; right: 40%; width:20%; height: auto;"/>
+  <p class="footer">kevinsprong.com
+</section>
+
+<section style="text-align:left;padding-top:2em;padding-left:2em">
+  <p style="font-size:140%;">We need to tell the computer how to evaluate a board.
+  <p style="font-size:120%;">Four heuristics and their weightings were tested via grid search:
+  <p>
+    1) Win condition: losing sucks, avoid it.<br>
+    2) Monotonicity: prevent tiles from getting trapped between bigger ones.<br>
+    3) Smoothness: Keep tiles near ones they can merge with.<br>
+    4) Open space: Leave open spaces on the board.<br>
+  <p>Open space was found to be useless - computer did best when ignoring it!
+  <p class="footer">kevinsprong.com
+</section>
+
+<section style="text-align:left;padding-top:1em;padding-left:2em;">
+  <p style="font-size:400%;color: #dc322f;">Threes!
+  <img src="http://kevinsprong.com/images/projects/gamesolver/Threes.png" style="position: absolute; bottom: 20%; right: 40%; width:20%; height: auto;"/>
+  <p class="footer">kevinsprong.com
+</section>
+
+<section style="text-align:left;padding-top:2em;padding-left:2em">
+  <p style="font-size:140%;">Evaluating a Threes board is different
+  <p style="font-size:120%;">Five heuristics and their weightings were tested again via grid search:
+  <p>
+    1) Win condition: losing sucks, avoid it.<br>
+    2) Monotonicity: prevent tiles from getting trapped between bigger ones.<br>
+    3) Smoothness: Keep tiles near ones they can merge with.<br>
+    4) Open space: Leave open spaces on the board.<br>
+    5) Checkerboarding: avoid getting 1's and 2's trapped by larger tiles.
+  <p>In Threes open space was found to be very useful!<br>but checkerboarding wasn't - smoothness takes care of it.
+  <p class="footer">kevinsprong.com
+</section>
+
+<section style="text-align:center;padding-top:5em;">
+  <p style="font-size:250%;">Differences from human play
+  <p class="footer">kevinsprong.com
+</section>
+
+<section style="text-align:left;padding-top:4em; padding-left: 2em;">
+  <p style="font-size: 90%;">In general, the computer will often delay making merges and let the board fill up.<br>
+    This lets it dictate where tiles go, then it can merge many tiles at once
+  <p style="font-size: 90%;">In 2048 the computer will switch the wall or corner it is attacking,<br>
+    especially late when the board gets cramped
+  <p style="font-size: 90%;">In 2048 the computer will often leave an opening such that either a 2 or a 4<br>
+    in the last remaining square allows play to continue<br>
+    e.g. a blank, a 2 above it, a 4 to the right, and then an 8 above and right.
+  <p style="font-size: 90%;">In Threes! the computer can make odd moves when it knows the next 4 moves to come<br>
+    where the plan depended all along on the next 4 cards all being 3's
+     
+  <p class="footer">kevinsprong.com
+</section>
+
+<section style="text-align:left;padding-top:1em;padding-left:2em;">
+  <p style="font-size:150%;">Its tactics work pretty well!
+  <img src="http://kevinsprong.com/images/projects/gamesolver/ScoreComparison.jpeg" style="position: absolute; bottom: 20%; right: 30%; width:40%; height: auto;"/>
+  <p class="footer">kevinsprong.com
+</section>
+
+
+<section style="text-align:center;padding-top:5em;">
+  <p style="font-size:400%;">Download it!
+  <p style="font-size:70%;">(warning: nerd level 5 required)
+  <p class="footer">kevinsprong.com
+</section>
+
+<section style="text-align:left;padding-top:4em; padding-left: 2em;">
+  <p style="font-size: 90%;">1) clone the source code: <br><code>git clone git@github.com:kevinsprong23/gamesolver.git</code>
+  <p style="font-size: 90%;">2) build it: <br><code>cd gamesolver; mvn install</code>
+  <p style="font-size: 90%;">3) run any of the Driver scripts from your IDE of choice (or the command line I guess).
+  <p class="footer">kevinsprong.com
+</section>
+
+
+<script src="http://kevinsprong.com/scripts/d3.v3.min.js"></script>
+<script src="http://kevinsprong.com/scripts/stack.v1.min.js"></script>
+<script>
+
+var mystack = stack()
+    .on("activate", activate)
+    .on("deactivate", deactivate);
+
+var follow = d3.select("#follow");
+
+function refollow(y) {
+  follow.style("top", (1 + (1 - mystack.scrollRatio()) / 2 - y) * 100 + "%");
+}
+
+</script>
+

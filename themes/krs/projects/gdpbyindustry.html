@@ -1,0 +1,31 @@
+{% extends "basefullscreen.html" %}
+
+{% block head %}
+{{ super() }}
+  <link rel="stylesheet" type="text/css" href="{{ SITEURL }}{{ ROOTDIR }}{{ THEME_STATIC_DIR }}/css/gdp-style.css"/>
+  <meta property="og:image" content="{{ SITEURL }}{{ ROOTDIR }}images/posts/gdp-by-industry/rowplot.png"/>
+{% endblock head %}
+
+{% block content %}
+    <h2>Change in composition of U.S. GDP for various industries:  1997 - 2013</h2>
+    <img src="http://kevinsprong.com/images/posts/gdp-by-industry/rowplot.svg" width="900"/>
+    <img src="http://kevinsprong.com/images/posts/gdp-by-industry/lineplot.svg" width="900"/>
+    <p>
+        Data source: <a href="http://www.bea.gov/industry/gdpbyind_data.htm">Bureau of Economic Analysis</a>
+    </p>
+    <p>
+        <a href="{{ SITEURL }}{{ ROOTDIR }}posts/2014/07/15/gdp-by-industry" target="_blank">Writeup and source code</a>
+    </p>
+
+    <div class="share-buttons">
+        share this:<br>
+        <a href="https://twitter.com/intent/tweet?text=State+metrics+interactive+graphic&url={{ SITEURL }}{{ ROOTDIR }}projects/statemetrics" target="_blank"><img src="{{ SITEURL }}{{ ROOTDIR }}{{ THEME_STATIC_DIR }}/images/sharetwitter.png" width="30" height="30"/></a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{ SITEURL }}{{ ROOTDIR }}projects/gdp-by-industry" target="_blank"><img src="{{ SITEURL }}{{ ROOTDIR }}{{ THEME_STATIC_DIR }}/images/sharefacebook.png" width="30" height="30"/></a>
+        <a href="https://plus.google.com/share?url={{ SITEURL }}{{ ROOTDIR }}projects/gdp-by-industry" target="_blank"><img src="{{ SITEURL }}{{ ROOTDIR }}{{ THEME_STATIC_DIR }}/images/sharegoogleplus.png" width="30" height="30"/></a>
+        <a href="http://www.linkedin.com/shareArticle?mini=true&url={{ SITEURL }}{{ ROOTDIR }}projects/gdp-by-industry&title=GDP+changes+by+industry+over+time&summary=Changes+in+GDP+by+industry+over+time&source={{SITENAME}}" target="_blank"><img src="{{ SITEURL }}{{ ROOTDIR }}{{ THEME_STATIC_DIR }}/images/sharelinkedin.png" width="30" height="30"/></a>
+      </div>
+
+{% endblock content %}
+
+
+

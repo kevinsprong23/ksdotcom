@@ -1,0 +1,101 @@
+/* css for index page of kevinsprong.com */
+
+#content {
+  font-family: "Open Sans", Arial, sans-serif;
+}
+
+h2 {
+  color: #777;
+  text-align: center;
+  font-size: 28px;
+}
+
+.post-link {
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  min-width: 320px;
+  max-width: 650px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+.post-link {
+  padding: 10px 5px 30px 5px;
+  border-bottom: 1px solid #ccc;
+}
+
+.post-link a {
+  color: #777;
+}
+
+.post-link a:hover {
+  text-decoration: none;
+}
+
+.post-link:hover {
+  background: rgba(38, 139, 210, 0.1);
+}
+
+.post-header {
+  font-family: "Droid Sans", Arial, sans-serif;
+  font-size: 28px;
+}
+
+p {
+  font-size: 20px;
+}
+
+.pagination, #allposts {
+  display: block;
+  position: relative;
+  font-size: 28px;
+  min-width: 300px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 40px;
+}
+
+.pagination ul, .pagination li {
+  display: inline;
+}
+
+#allposts {
+  padding-top: 0px;
+  padding-bottom: 40px;
+}
+
+@media screen and (max-width: 890px) {
+  .entry-content img, .post-link img  {
+    max-width: 450px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .post-link {
+    width: 95%;
+    min-width: 304px;
+    max-width: 660px;
+    padding-right: 0px;
+  }
+
+  .entry-content img, .post-link img {
+    max-width: 450px;
+    height: auto;
+  }
+  
+}
+
+@media screen and (max-width: 600px) {
+  .post-link {
+    padding: 10px 0px 30px 0px;
+  }
+  .entry-content img, .post-link img {
+    max-width: 304px;
+    height: auto;
+  }
+}

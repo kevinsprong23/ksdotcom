@@ -1,0 +1,51 @@
+/* css for about page of kevinsprong.com */
+
+#content {
+  font-family: "Open Sans", Arial, sans-serif;
+}
+
+#about {
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  min-width: 304px;
+  max-width: 500px;
+  padding-bottom: 3%;
+}
+
+h3 {
+  text-align: center;
+  font-family: "Droid Sans", Arial, sans-serif;
+  font-size: 30px;
+}
+
+p {
+  text-align: left;
+  font-size: 18px;
+}
+
+
+#cclic {
+  font-size: 14px;
+  display: block;
+  position: relative;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding-bottom: 2%;
+}
+
+@media screen and (max-width: 400px) {
+ #about {
+   width: 95%;
+   min-width: 300px;
+   max-width: 660px;
+   padding-right: 0px;
+  }
+}
+
+
+

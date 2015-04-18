@@ -1,0 +1,34 @@
+{% extends "basefullscreen.html" %}
+
+{% block head %}
+{{ super() }}
+  <link rel="stylesheet" type="text/css" href="{{ SITEURL }}{{ ROOTDIR }}projects/statemetrics/statemetrics-style.css"/>
+  <meta property="og:image" content="{{ SITEURL }}{{ ROOTDIR }}images/projects/statemetrics/screenshot.png"/>
+{% endblock head %}
+
+{% block content %}
+    <h2>2013 Federal spending (x), 2013 Federal tax revenue (y),<br>2012 population (radius), and Obama's 2012 victory margin (color) by State.</h2>
+    <div id="datacanvas"></div>
+    <p>
+        Data sources: 
+        <a href="http://www.irs.gov/uac/SOI-Tax-Stats-Gross-Collections,-by-Type-of-Tax-and-State,-Fiscal-Year-IRS-Data-Book-Table-5">IRS</a>, 
+        <a href="http://usaspending.gov/state-summary-tabular?tab=By+Location&tabletype=statesummary">usaspending</a>,
+        <a href="https://www.census.gov/popest/data/state/totals/2012/tables/NST-EST2012-01.csv">Census</a>, 
+        <a href="http://www.fec.gov/pubrec/fe2012/federalelections2012.pdf">FEC</a>
+    </p>
+    
+    <script src="{{ SITEURL }}{{ ROOTDIR }}scripts/d3.v3.min.js"></script>
+    <script src="{{ SITEURL }}{{ ROOTDIR }}scripts/d3.tip.js"></script>
+    <script src="{{ SITEURL }}{{ ROOTDIR }}projects/statemetrics/statemetrics.js"></script>
+    <div class="share-buttons">
+        share this:<br>
+        <a href="https://twitter.com/intent/tweet?text=State+metrics+interactive+graphic&url={{ SITEURL }}{{ ROOTDIR }}projects/statemetrics" target="_blank"><img src="{{ SITEURL }}{{ ROOTDIR }}{{ THEME_STATIC_DIR }}/images/sharetwitter.png" width="30" height="30"/></a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{ SITEURL }}{{ ROOTDIR }}projects/statemetrics" target="_blank"><img src="{{ SITEURL }}{{ ROOTDIR }}{{ THEME_STATIC_DIR }}/images/sharefacebook.png" width="30" height="30"/></a>
+        <a href="https://plus.google.com/share?url={{ SITEURL }}{{ ROOTDIR }}projects/statemetrics" target="_blank"><img src="{{ SITEURL }}{{ ROOTDIR }}{{ THEME_STATIC_DIR }}/images/sharegoogleplus.png" width="30" height="30"/></a>
+        <a href="http://www.linkedin.com/shareArticle?mini=true&url={{ SITEURL }}{{ ROOTDIR }}projects/statemetrics&title=State+metrics+interactive+graphic&summary=State+tax+and+voting+metrics+interactive+graphic&source={{SITENAME}}" target="_blank"><img src="{{ SITEURL }}{{ ROOTDIR }}{{ THEME_STATIC_DIR }}/images/sharelinkedin.png" width="30" height="30"/></a>
+      </div>
+
+{% endblock content %}
+
+
+

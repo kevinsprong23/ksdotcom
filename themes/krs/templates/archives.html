@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block head %}
+{{ super() }}
+  <link rel="stylesheet" type="text/css" href="{{ SITEURL }}{{ ROOTDIR }}{{ THEME_STATIC_DIR }}/css/archive-style.css"/>
+{% endblock head %}
+
+{% block content %}
+{% block content_title %}
+      <h3>All Articles</h3>
+{% endblock content_title %}
+{% for article in articles %}
+      
+    <div class="indexentry">
+      <header> 
+        <h4 class="entry-title">
+          <a href="{{ SITEURL }}{{ ROOTDIR }}{{ article.url}}">{{ article.title|striptags }}</a>
+        </h4> 
+      </header>
+      <footer class="post-info">
+        <abbr class="published" title="{{ article.date.isoformat }}">{{ article.locale_date }}</abbr>
+      </footer><!-- /.post-info -->
+    </div>
+{% endfor %}
+{% endblock content %}

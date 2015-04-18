@@ -1,0 +1,22 @@
+html, body {
+    min-width: 1100px;
+}
+
+/* style the basic elements of the page */
+#content { 
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 24px;
+    padding-left:2em;
+    background-color:#333;
+    color:#c9c8b8;
+}
+
+a {
+  color: #3c739e;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #268bd2;
+  text-decoration: underline;
+}

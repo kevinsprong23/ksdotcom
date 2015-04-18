@@ -1,0 +1,166 @@
+/* css for each blog post page of kevinsprong.com */
+
+#content {
+  font-family: "Open Sans", Arial, sans-serif;
+}
+
+.entry-content, .post-info, .article-tags, .post-header, .share-buttons {
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  min-width: 320px;
+  max-width: 650px;
+  padding-bottom: 3%;
+  padding-right: 220px;
+}
+
+.article-tags {
+  font-style: italic;
+}
+
+.post-info {
+  text-align: center;
+}
+
+.post-header {
+  text-align: center;
+  font-family: "Droid Sans", Arial, sans-serif;
+  font-size: 32px;
+}
+
+.share-buttons {
+  text-align: center;
+  font-size: 16px;
+  padding-bottom: 50px;
+}
+
+.share-buttons a {
+  padding: 0px 7px 0px 7px;
+}
+
+p {
+  text-align: left;
+  font-size: 20px;
+}
+
+code {
+  font-size: 18px;
+  color: #859900;
+}
+
+h3, h3 a {
+  color: #777;
+}
+
+#sidebar {
+  position: fixed;
+  top: 0;
+  right: 0px;
+  height: 100%;
+  width: 280px;
+  background-color: none;
+}
+
+#sidebar div {
+  padding: 0 1.5em 0 1.5em;
+}
+
+#sidebar #recentposts {
+  padding-top: 220px;
+}
+
+#sidebar a, #sidebar #recentposts a {
+  color: #268bd2;
+}
+
+#recentposts li {
+  margin-top: 0;
+}
+
+#allposts, #bycategory, #bytag, #sidebartitle {
+    font-size: 130%;
+}
+
+@media screen and (max-width: 890px) {
+  .entry-content img {
+    max-width: 452px;
+    height: auto;
+    /*max-height: 310px;*/
+  }
+  code, pre div span {
+    font-size: 12px;
+  }
+  .highlight * {
+    font-size: 12px;  
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #sidebar {
+    position: relative;
+    margin-top: 40px;
+    border-bottom: 1px solid #555;
+    width: 100%;
+    height: 164px;
+    background-color: #ddd;
+  }
+
+  #sidebar div {
+    padding: 1em 1.5em 1em 1.5em;
+    text-align: center;
+    border-bottom: 1px solid #555;
+  }
+
+  #sidebar ul {
+    display: block;
+    list-style-type: none;
+    text-align: center;
+  }
+
+  #sidebar #recentposts {
+    display: none;
+  }
+  
+  #allposts, #bycategory, #bytag, #sidebartitle {
+    font-size: 100%;
+  } 
+    
+  .entry-content, .post-info, .post-header, .article-tags, .share-buttons {
+    width: 95%;
+    min-width: 304px;
+    max-width: 660px;
+    padding-right: 0px;
+  }
+
+  .entry-content img {
+    max-width: 550px;
+    height: auto;
+    /*max-height: 400px;*/
+  }
+    
+  /*
+  code, pre div span {
+    font-size: 12px;
+  }
+  .highlight * {
+    font-size: 12px;  
+  }
+  */
+}
+
+@media screen and (max-width: 600px) {
+  .entry-content img {
+    max-width: 304px;
+    height: auto;
+    /*max-height: 220px;*/
+  }
+  code, pre div span {
+    font-size: 8px;
+  }
+  .highlight * {
+    font-size: 8px;  
+  }
+    
+}

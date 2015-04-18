@@ -1,0 +1,133 @@
+{% extends "base.html" %}
+
+{% block head %}
+{{ super() }}
+  <link rel="stylesheet" type="text/css" href="{{ SITEURL }}{{ ROOTDIR }}{{ THEME_STATIC_DIR }}/css/projects-style.css"/>
+{% endblock head %}
+
+{% block content %}
+
+  <h2>Links to miscellaneous side projects:</h2>
+
+  <div class="project">
+    <a href="http://kevinsprong23.github.io/dwelp-solver/" target="_blank">
+      <div class="projicon">
+        <div class="projtitle">Dwelp solver</div>
+        <img src="{{ SITEURL }}{{ ROOTDIR }}images/posts/dwelp/thumbnail.png" width="200" height="200"/>
+      </div>
+      <div class="projinfo">
+        Browser-based solver for the mobile game Dwelp. 
+        Game logic as a javascript module, driver scripts using d3.
+      </div>
+    </a>
+  </div>
+
+  <div class="project">
+    <a href="http://kevinsprong.com/posts/2014/11/20/buda-social-graph/" target="_blank">
+      <div class="projicon">
+        <div class="projtitle">BUDA graph</div>
+        <img src="{{ SITEURL }}{{ ROOTDIR }}images/projects/buda-graph/indexpic.png" width="200" height="200"/>
+      </div>
+      <div class="projinfo">
+        Graph analysis using BUDA rosters dating back to 1999. 
+        Featured Python's requests + multiprocessing, and an Angular.js-based search capability.
+      </div>
+    </a>
+  </div>
+
+  <div class="project">
+    <a href="{{ SITEURL }}{{ ROOTDIR }}projects/ncaainnfl" target="_blank">
+      <div class="projicon">
+        <div class="projtitle">NFL by School</div>
+        <img src="{{ SITEURL }}{{ ROOTDIR }}images/posts/ncaa-alumni-in-nfl/indexpic.png" width="200" height="200"/>
+      </div>
+      <div class="projinfo">
+          Makeup of NFL by school attended over time for the top 20 schools by NFL representation since 1990.
+      </div>
+    </a>
+  </div>
+
+  <div class="project">
+    <a href="{{ SITEURL }}{{ ROOTDIR }}projects/d3-filtermap" target="_blank">
+      <div class="projicon">
+        <div class="projtitle">Filterable d3 Map</div>
+        <img src="{{ SITEURL }}{{ ROOTDIR }}images/projects/d3-filtermap/indexpic.jpg" width="200" height="200"/>
+      </div>
+      <div class="projinfo">
+          d3 + topoJson plot of passenger enplanement data at U.S. airports in 2013, with a range filter and dynamic size updating.
+      </div>
+    </a>
+  </div>
+
+  <div class="project">
+    <a href="{{ SITEURL }}{{ ROOTDIR }}projects/gdp-by-industry" target="_blank">
+      <div class="projicon">
+        <div class="projtitle">GDP By Industry</div>
+        <img src="{{ SITEURL }}{{ ROOTDIR }}images/posts/gdp-by-industry/thumbnail.png" width="200" height="200"/>
+      </div>
+      <div class="projinfo">
+          ggplot2 plot of changes in composition of U.S. GDP over time for selected industries.  Data covers 1997 - 2013.
+      </div>
+    </a>
+  </div>
+
+  <div class="project">
+    <a href="{{ SITEURL }}{{ ROOTDIR }}projects/statemetrics" target="_blank">
+      <div class="projicon">
+        <div class="projtitle">State Metrics</div>
+        <img src="{{ SITEURL }}{{ ROOTDIR }}images/projects/statemetrics/thumbnail.png" width="200" height="200"/>
+      </div>
+      <div class="projinfo">
+          2013 Federal spending and tax revenues by state, plotted against population and Obama's 2012 
+          victory margin.  Interactivity and mouseovers via d3-tip and d3.js.
+      </div>
+    </a>
+  </div>
+
+  <div class="project">
+    <a href="{{ SITEURL }}{{ ROOTDIR }}projects/bostonhousing" target="_blank">
+      <div class="projicon">
+        <div class="projtitle">Housing Costs</div>
+        <img src="{{ SITEURL }}{{ ROOTDIR }}images/projects/bostonhousing/indexpic.jpg" width="200" height="200"/>
+      </div>
+      <div class="projinfo">
+        Housing costs versus incomes for the greater Boston area.
+        Inflation-adjusted median incomes, monthly mortgage costs,
+        and monthly rents for five Boston-area counties.
+      </div>
+    </a>
+  </div>
+
+  <div class="project">
+    <a href="{{ SITEURL }}{{ ROOTDIR }}projects/gamesolver" target="_blank">
+      <div class="projicon">
+        <div class="projtitle">Game bots</div>
+        <img src="{{ SITEURL }}{{ ROOTDIR }}images/projects/gamesolver/indexpic.jpg" width="200" height="200"/>
+      </div>
+      <div class="projinfo">
+        I built a Java app using Alpha-Beta pruning to beat the games
+        2048 and Threes!.  They do pretty well, I have a writeup about it
+        on this site and the code is also available on my github page. Follow this link
+        to see a brief overview of the project.
+      </div>
+    </a>
+  </div>
+  <div class="project">
+    <a href="https://github.com/kevinsprong23/ksdotcom" target="_blank">
+      <div class="projicon">
+        <div class="projtitle">This website</div>
+        <img src="{{ SITEURL }}{{ ROOTDIR }}images/projects/ksdotcom/indexpic.jpg" width="200" height="200"/>
+      </div>
+      <div class="projinfo">
+        This was my first attempt at putting up a website from scratch - 
+        HTML/CSS, web hosting, domain name registration, site layout, etc.
+        It started as a static page just to host my resume, then 
+        I slowly added responsive design in some places and finally 
+        integrated everything into the Pelican workflow.
+      </div>
+    </a>
+  </div>
+{% endblock content %}
+
+
+

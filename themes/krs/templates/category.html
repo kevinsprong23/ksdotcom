@@ -1,0 +1,9 @@
+{% extends "archives.html" %}
+{% block head %}
+  {{ super() }}
+  <link rel="stylesheet" type="text/css" href="{{SITEURL}}{{ROOTDIR}}{{THEME_STATIC_PATH}}/css/archive-style.css"/>
+{% endblock head %}
+{% block content_title %}
+      <h3>Articles in the "{{ category }}" category:</h3>
+{% endblock content_title %}
+

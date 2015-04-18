@@ -1,0 +1,33 @@
+{% extends "basefullscreen.html" %}
+
+{% block head %}
+{{ super() }}
+  <link rel="stylesheet" type="text/css" href="{{ SITEURL }}{{ ROOTDIR }}projects/bostonhousing/bosthousing-style.css"/>
+  <meta property="og:image" content="{{ SITEURL }}{{ ROOTDIR }}images/projects/bostonhousing/screenshot.png"/>
+{% endblock head %}
+
+{% block content %}
+    <h1>Housing costs and income in the greater Boston area</h1>
+    <h4>Median monthly data by year, 2002 - 2012</h4>
+    <div id="canvas"></div>
+    <p><br>Income and housing data from the <a href="http://www.census.gov/acs/www/" target="_blank">American Community Survey</a></p>
+    <p>Inflation data from <a href="http://www.bls.gov/cpi/" target="_blank">BLS.gov</a></p>
+    <button id="MS" style="top:380px;" onclick="transitionMI()">Middlesex County</button>
+    <button id="SU" style="top:470px;" onclick="transitionSU()">Suffolk County</button>
+    <button id="NO" style="top:560px;" onclick="transitionNO()">Norfolk County</button>
+    <button id="ES" style="top:650px;" onclick="transitionES()">Essex County</button>
+    <button id="PL" style="top:740px;" onclick="transitionPL()">Plymouth County</button>  
+    <script src="{{ SITEURL }}{{ ROOTDIR }}scripts/d3.v3.min.js"></script>
+    <script src="{{ SITEURL }}{{ ROOTDIR }}projects/bostonhousing/boston.housing.js"></script>
+    <div class="share-buttons">
+        share this:<br>
+        <a href="https://twitter.com/intent/tweet?text=Boston+area+housing+costs+interactive+graphic&url={{ SITEURL }}{{ ROOTDIR }}projects/bostonhousing" target="_blank"><img src="{{ SITEURL }}{{ ROOTDIR }}{{ THEME_STATIC_DIR }}/images/sharetwitter.png" width="30" height="30"/></a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{ SITEURL }}{{ ROOTDIR }}projects/bostonhousing" target="_blank"><img src="{{ SITEURL }}{{ ROOTDIR }}{{ THEME_STATIC_DIR }}/images/sharefacebook.png" width="30" height="30"/></a>
+        <a href="https://plus.google.com/share?url={{ SITEURL }}{{ ROOTDIR }}projects/bostonhousing" target="_blank"><img src="{{ SITEURL }}{{ ROOTDIR }}{{ THEME_STATIC_DIR }}/images/sharegoogleplus.png" width="30" height="30"/></a>
+        <a href="http://www.linkedin.com/shareArticle?mini=true&url={{ SITEURL }}{{ ROOTDIR }}projects/bostonhousing&title=Boston+area+housing+costs+interactive+graphic&summary=Median+housing+costs+by+county+in+the+Boston+area&source={{SITENAME}}" target="_blank"><img src="{{ SITEURL }}{{ ROOTDIR }}{{ THEME_STATIC_DIR }}/images/sharelinkedin.png" width="30" height="30"/></a>
+      </div>
+
+{% endblock content %}
+
+
+

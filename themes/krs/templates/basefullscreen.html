@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="{{ DEFAULT_LANG }}">
+<head>
+  {% block head %}
+  <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
+  <meta charset="utf-8" />
+  <link type="text/css" rel="stylesheet" href="{{SITEURL}}{{ROOTDIR}}{{THEME_STATIC_DIR}}/css/fullscreen-style.css"/>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,300' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Cabin:600' rel='stylesheet' type='text/css'>
+  <link rel="shortcut icon" href="{{SITEURL}}{{ROOTDIR}}favicon.ico">
+  <link rel="apple-touch-icon" href="{{SITEURL}}{{ROOTDIR}}{{THEME_STATIC_DIR}}/images/ks-ico-apple.png"/>
+  {% if FEED_ALL_ATOM %}
+  <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed" />
+  {% endif %}
+  {% if FEED_ALL_RSS %}
+  <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Full RSS Feed" />
+  {% endif %}
+  {% if FEED_ATOM %}
+  <link href="{{ FEED_DOMAIN }}/{{ FEED_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed" />
+  {% endif %}
+  {% if FEED_RSS %}
+  <link href="{{ FEED_DOMAIN }}/{{ FEED_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
+  {% endif %}
+  {% if CATEGORY_FEED_ATOM and category %}
+  <link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_ATOM|format(category.slug) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Categories Atom Feed" />
+  {% endif %}
+  {% if CATEGORY_FEED_RSS and category %}
+  <link href="{{ FEED_DOMAIN }}/{{ CATEGORY_FEED_RSS|format(category.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Categories RSS Feed" />
+  {% endif %}
+  {% if TAG_FEED_ATOM and tag %}
+  <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_ATOM|format(tag.slug) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Tags Atom Feed" />
+  {% endif %}
+  {% if TAG_FEED_RSS and tag %}
+  <link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_RSS|format(tag.slug) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Tags RSS Feed" />
+  {% endif %}
+  {% if GOOGLE_ANALYTICS %}
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', '{{GOOGLE_ANALYTICS}}', 'kevinsprong.com');
+    ga('send', 'pageview');
+
+  </script>
+  {% endif %}
+  {% endblock head %}
+</head>
+
+<body>
+  <div id="container"> <!-- all the content goes inside this -->  
+    <!-- Header, this will be at the top of every page on the site -->
+    <div id="header">
+      <div id="sitetitle">
+        kevinsprong.com
+      </div>
+      <div id="sitetagline">
+        The blog and personal website of Kevin Sprong
+      </div>
+      <div id="mainimage">
+        <img src="{{SITEURL}}{{ROOTDIR}}{{THEME_STATIC_DIR}}/images/me.png" width="160" height="160"/>
+      </div>
+      <div id="navbar">
+        <div class="navbutton">
+          <a href="{{SITEURL}}{{ROOTDIR}}">
+            <img src="{{SITEURL}}{{ROOTDIR}}{{THEME_STATIC_DIR}}/images/home_btn.png" width="50" height="50"/>
+            <div class="buttontext">Home</div>
+          </a>
+        </div>
+        <div class="navbutton">
+          <a href="{{SITEURL}}{{ROOTDIR}}projects/">
+            <img src="{{SITEURL}}{{ROOTDIR}}{{THEME_STATIC_DIR}}/images/projects_btn.png" width="50" height="50"/>
+            <div class="buttontext">Projects</div>
+          </a>
+        </div>
+        <div class="navbutton">
+          <a href="{{SITEURL}}{{ROOTDIR}}resume/">
+            <img src="{{SITEURL}}{{ROOTDIR}}{{THEME_STATIC_DIR}}/images/resume_btn.png" width="50" height="50"/>
+            <div class="buttontext">Resume</div>
+          </a>
+        </div>
+        <div class="navbutton">
+          <a href="{{SITEURL}}{{ROOTDIR}}about/">
+            <img src="{{SITEURL}}{{ROOTDIR}}{{THEME_STATIC_DIR}}/images/about_btn.png" width="50" height="50"/>
+            <div class="buttontext">About</div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- end header content -->
+
+    <!-- page specific content goes here -->
+    <div id="content">
+    {% block content %}
+    {% endblock content %}
+    </div>   
+    
+    <!-- Footer, this will be at the bottom of every page on the site -->
+    <div id="footer">
+      <div id="flickricon" class="footericon">
+        <a href="{{FLICKR_URL}}" target="_blank">
+          <img src="{{SITEURL}}{{ROOTDIR}}{{THEME_STATIC_DIR}}/images/flickr_icon.png" width="40" height="40"/>
+        </a>
+      </div>
+      <div id="quoraicon" class="footericon">
+        <a href="{{QUORA_URL}}" target="_blank">
+          <img src="{{SITEURL}}{{ROOTDIR}}{{THEME_STATIC_DIR}}/images/quora_icon.png" width="40" height="40"/>
+        </a>
+      </div>      
+      <div id="twittericon" class="footericon">
+        <a href="{{TWITTER_URL}}" target="_blank">
+          <img src="{{SITEURL}}{{ROOTDIR}}{{THEME_STATIC_DIR}}/images/twitter_icon.png" width="40" height="40"/>
+        </a>
+      </div>
+      <div id="githubicon" class="footericon">
+        <a href="{{GITHUB_URL}}" target="_blank">
+          <img src="{{SITEURL}}{{ROOTDIR}}{{THEME_STATIC_DIR}}/images/mark_icon.png" width="40" height="40"/>
+        </a>
+      </div>
+      <div id="linkedinicon" class="footericon">
+        <a href="{{LINKEDIN_URL}}" target="_blank">
+          <img src="{{SITEURL}}{{ROOTDIR}}{{THEME_STATIC_DIR}}/images/linkedin_icon.png" width="40" height="40"/>
+        </a>
+      </div>
+      <div id="feedlyicon" class="footericon">
+        <a href='http://cloud.feedly.com/#subscription%2Ffeed%2Fhttp%3A%2F%2Fkevinsprong.com%2Ffeeds%2Fall.atom.xml' target='_blank'>
+          <img src='{{SITEURL}}{{ROOTDIR}}{{THEME_STATIC_DIR}}/images/feedly-follow.png' width='40' height='40'/>
+        </a> 
+      </div>
+      <div id="iconnote">
+        Find me at:
+      </div>
+    </div>
+  </div>
+</body>
+</html>

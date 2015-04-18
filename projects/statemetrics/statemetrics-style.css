@@ -1,0 +1,48 @@
+#content {
+  font-family: "Open Sans", Arial, sans-serif;
+  background: #333;
+  color: #c9c8b8;
+  padding-left: 2em;
+}
+
+svg g {
+    stroke: none;  
+    fill: #c9c8b8;
+}
+
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #c9c8b8;
+    shape-rendering: crispEdges;
+}
+
+.datapoint {
+    opacity: 0.9;   
+}
+
+.d3-tip {
+    line-height: 1;
+    padding: 12px;
+    background: rgba(0,0,0,0.8);
+    color: #ddd;
+    border-radius: 2px;
+    font-family: "Open Sans", Arial, sans-serif;
+}
+
+.statename {
+    color: #859900;
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+a {
+  color: #3c739e;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #268bd2;
+  text-decoration: underline;
+}

@@ -1,0 +1,83 @@
+html, body {
+  min-width: 1200px;
+}
+
+#content {
+  font-family: "Open Sans", Arial, sans-serif;
+  background: #333;
+  color: #c9c8b8;
+  padding-left: 2em;
+}
+
+svg g {
+  stroke: none;  
+  fill: #c9c8b8;
+}
+    
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #c9c8b8;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.line1, .line2, .line3 {
+  fill: none;
+  stroke-width: 3px;
+}
+
+.income {
+  stroke: #268bd2;
+  fill: #268bd2;
+}
+
+.mortgage {
+  stroke: #859900;
+  fill: #859900;
+}
+
+.rent {
+  stroke: #dc322f;
+  fill: #dc322f;
+}
+    
+.incometxt {
+  stroke: none;
+  fill: #268bd2;
+}
+
+.mortgagetxt {
+  stroke: none;
+  fill: #859900;
+}
+
+.renttxt {
+  stroke: none;
+  fill: #dc322f;
+}
+    
+.county {
+   font-size: 1.5em; 
+}
+
+button {
+  position: absolute;
+  left: 1020px;
+  width: 150px;
+  height: 80px;
+  font-size: 1em;
+  background: #444;
+  color: #c9c8b8;
+  border: 2px solid #111;
+  border-radius: 10px;
+}
+    
+button:hover {
+  background: #167bb2;
+  color: #eee;
+  border: 3px solid #d9d8c8;
+}

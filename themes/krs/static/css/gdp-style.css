@@ -1,0 +1,17 @@
+#content {
+  font-family: "Open Sans", Arial, sans-serif;
+  background: #f7f7f5;
+  color: #777;
+  padding-left: 2em;
+  min-width: 900px;
+}
+
+a {
+  color: #3c739e;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #268bd2;
+  text-decoration: underline;
+}

@@ -1,0 +1,32 @@
+{% extends "basefullscreen.html" %}
+
+{% block head %}
+{{ super() }}
+  <link rel="stylesheet" type="text/css" href="{{ SITEURL }}{{ ROOTDIR }}{{ THEME_STATIC_DIR }}/css/nfl-style.css"/>
+  <meta property="og:image" content="{{ SITEURL }}{{ ROOTDIR }}images/posts/ncaa-alumni-in-nfl/nfl_streamgraph.png"/>
+{% endblock head %}
+
+{% block content %}
+    <h2>Top 20 colleges by overall NFL representation since 1990</h2>
+    <img src="http://kevinsprong.com/images/posts/ncaa-alumni-in-nfl/nfl_bargraph.png" width="1000"/>
+    <img src="http://kevinsprong.com/images/posts/ncaa-alumni-in-nfl/nfl_streamgraph.png" width="1000"/>
+    
+    <p>
+        Data source: <a href="http://www.jt-sw.com">here</a>, augmented with espn.com
+    </p>
+    <p>
+        Writeup: <a href="{{ SITEURL }}{{ ROOTDIR }}posts/2014/09/09/ncaa-alumni-in-nfl">http://kevinsprong.com/posts/2014/09/09/ncaa-alumni-in-nfl</a>.
+    </p>
+
+    <div class="share-buttons">
+        share this:<br>
+        <a href="https://twitter.com/intent/tweet?text=College+representation+in+NFL&url={{ SITEURL }}{{ ROOTDIR }}projects/ncaainnfl" target="_blank"><img src="{{ SITEURL }}{{ ROOTDIR }}{{ THEME_STATIC_DIR }}/images/sharetwitter.png" width="30" height="30"/></a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{ SITEURL }}{{ ROOTDIR }}projects/ncaainnfl" target="_blank"><img src="{{ SITEURL }}{{ ROOTDIR }}{{ THEME_STATIC_DIR }}/images/sharefacebook.png" width="30" height="30"/></a>
+        <a href="https://plus.google.com/share?url={{ SITEURL }}{{ ROOTDIR }}projects/ncaainnfl" target="_blank"><img src="{{ SITEURL }}{{ ROOTDIR }}{{ THEME_STATIC_DIR }}/images/sharegoogleplus.png" width="30" height="30"/></a>
+        <a href="http://www.linkedin.com/shareArticle?mini=true&url={{ SITEURL }}{{ ROOTDIR }}projects/ncaainnfl&title=College+representation+in+NFL&summary=College+representation+in+NFL&source={{SITENAME}}" target="_blank"><img src="{{ SITEURL }}{{ ROOTDIR }}{{ THEME_STATIC_DIR }}/images/sharelinkedin.png" width="30" height="30"/></a>
+      </div>
+
+{% endblock content %}
+
+
+

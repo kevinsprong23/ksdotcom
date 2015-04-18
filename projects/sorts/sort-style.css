@@ -1,0 +1,27 @@
+line {
+    stroke: #555;
+    stroke-width: 1.5px;
+}
+
+.sortexample {
+    position: relative;
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.sorttitle {
+    position: relative;
+    display: block;
+    text-align: left;
+}
+
+.laps {
+    text-align: right;
+    position: absolute;
+    padding: 2px;
+    right: 0px;
+    top: 0px;
+    font-style:italic;
+}

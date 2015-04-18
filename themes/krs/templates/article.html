@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block head %}
+{{ super() }}
+  <link rel="stylesheet" type="text/css" href="{{ SITEURL }}{{ ROOTDIR }}{{ THEME_STATIC_DIR }}/css/article-style.css"/>
+  <meta property="og:title" content="{{article.title|striptags}}"/>
+  <meta property="og:image" content="{{article.ogimage}}"/>
+  <meta property="og:description" content="{{article.summary|striptags}}" />
+  <title>{{article.title|striptags}} - {{ SITENAME }}</title>
+{% endblock head %}
+
+{% block content %}
+
+      <div class="post-header">
+        <h3>{{article.title|striptags}}</h3>     
+      </div>
+      <div class="post-info">
+        <abbr class="published" title="{{ article.date.isoformat() }}">
+          Posted {{ article.locale_date }} in <a href="{{ SITEURL }}{{ ROOTDIR }}{{ article.category.url }}">{{article.category}}</a>
+        </abbr>
+      </div><!-- /.post-info -->
+      <div class="entry-content">
+        {{ article.content }}
+      </div><!-- /.entry-content -->
+      <div class="article-tags">
+        Tags: 
+        {% for tag in article.tags %}
+          <a href="{{ SITEURL }}{{ ROOTDIR }}{{ tag.url }}">{{ tag }}</a> 
+          {% if not loop.last %}
+          ,
+          {% endif %}
+        {% endfor %}
+      </div>
+      <div class="share-buttons">
+        share this:<br>
+        <a href="https://twitter.com/intent/tweet?text={{article.title|striptags|urlencode}}&url={{ SITEURL }}{{ ROOTDIR }}{{article.url}}" target="_blank"><img src="{{ SITEURL }}{{ ROOTDIR }}{{ THEME_STATIC_DIR }}/images/sharetwitter.png" width="30" height="30"/></a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{ SITEURL }}{{ ROOTDIR }}{{article.url}}" target="_blank"><img src="{{ SITEURL }}{{ ROOTDIR }}{{ THEME_STATIC_DIR }}/images/sharefacebook.png" width="30" height="30"/></a>
+        <a href="https://plus.google.com/share?url={{ SITEURL }}{{ ROOTDIR }}{{article.url}}" target="_blank"><img src="{{ SITEURL }}{{ ROOTDIR }}{{ THEME_STATIC_DIR }}/images/sharegoogleplus.png" width="30" height="30"/></a>
+        <a href="http://www.linkedin.com/shareArticle?mini=true&url={{ SITEURL }}{{ ROOTDIR }}{{article.url}}&title={{article.title|striptags|urlencode}}&summary={{article.summary|striptags|urlencode}}&source={{SITENAME}}" target="_blank"><img src="{{ SITEURL }}{{ ROOTDIR }}{{ THEME_STATIC_DIR }}/images/sharelinkedin.png" width="30" height="30"/></a>
+      </div>
+      <div id="sidebar">
+        <div id="recentposts">
+          <span id="sidebartitle">Recent articles:</span>
+          <ul>
+          {% for article in articles %}
+            {% if loop.index <= 8 %}
+          <li><a href="{{ SITEURL }}{{ ROOTDIR }}{{ article.url }}">{{article.title|striptags}}</a></li>
+            {% endif %}
+          {% endfor %}
+          </ul>
+        </div>
+        <div id="allposts">
+          <a href="{{ SITEURL }}{{ ROOTDIR }}archives.html">All Articles</a>
+        </div>
+        <div id="bycategory">
+          <a href="{{ SITEURL }}{{ ROOTDIR }}categories.html">Browse By Category</a>
+        </div>
+        <div id="bytag">
+          <a href="{{ SITEURL }}{{ ROOTDIR }}tags.html">Browse By Tag</a>
+        </div>
+      </div>
+
+{% endblock content %}
+
+
+

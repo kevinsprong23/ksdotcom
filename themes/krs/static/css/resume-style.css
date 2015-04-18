@@ -1,0 +1,39 @@
+/* css for html version of resume on kevinsprong.com */
+
+html, body {
+  background-color: #333;   
+}
+
+/* resume-specific properties */
+#content {
+  width: 100%;
+  max-width: 850px;
+  min-width: 304px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+  padding-bottom: 70px;
+}
+
+/* media queries for varying browser widths */
+@media screen and (max-width: 920px) {
+  #content {
+    width: 90%;
+  }
+  
+}
+
+@media screen and (max-width: 680px) {
+  #content {
+    width: 95%;
+  }
+  
+}
+
+@media screen and (max-width: 530px) {
+  #content {
+    width: 95%;
+    padding-left: 0.5%;
+  }
+
+}

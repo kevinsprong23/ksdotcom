@@ -1,0 +1,145 @@
+/* css for common elements (header, footer) of kevinsprong.com */
+
+/* set top level properties e.g. font and color */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #f7f7f5;
+}
+
+a {
+  color: #3c739e;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #268bd2;
+  text-decoration: underline;
+}
+
+/* these three things will be the same for every page on the site */
+#container {
+  position: relative;
+  min-height: 100%;
+}
+
+#header {
+  position: relative;
+  color: #eee8d5;
+  height: 180px;
+  width: 100%;
+  min-width: 320px; 
+  margin: auto;
+  text-align: center;
+  font-family: "Cabin", Arial, sans-serif;
+  background: -webkit-linear-gradient(#777, #222); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#777, #222); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#777, #222); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#777, #222); /* Standard syntax */
+}
+
+#header #mainimage {
+  position: absolute;
+  left: 3%;
+  top: 10px;
+}
+
+#header #sitetitle {
+  font-size: 50px;
+  position: relative;
+  display: block;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#header #sitetagline {
+  font-size: 16px;
+  position: relative;
+  width: 80%;
+  white-space: nowrap;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#navbar {
+  position: relative;
+  width: 80%;
+  font-family: "Cabin", Arial, sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navbutton {
+  position: relative;
+  display: inline-block;
+  padding: 15px 12px 1px 12px;
+}
+
+.buttontext {
+  font-size: 14px;
+  position: absolute;
+  top: 65px;
+  left: 0px;
+  width: 100%;
+  text-align: center;
+}
+
+.navbutton a {
+  color: #bbb;
+}
+
+.navbutton:hover {
+  opacity: 0.7;
+}
+
+.navbutton a:hover {
+  color: #268bd2;
+  font-weight: bold;
+}
+
+/* call every main part of every page "content" to make this work with footer */
+#content {
+  color: #888;
+  padding: 12px;
+  padding-bottom: 70px;
+}
+
+#footer {
+  font-size: 18px;
+  font-family: "Cabin", Arial, sans-serif;
+  color: #888;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  min-width: 320px;
+  height: 70px;
+  background-color: #252525;
+}
+
+.footericon {
+   display: inline-block;
+  float: right;
+  padding-top: 15px;
+  padding-right: 5px;
+}
+
+#flickricon {
+  margin-right: 10px;
+  padding-right: 15px;
+}
+
+#footer #iconnote {
+  float: right;
+  padding-right: 15px;
+  text-align: right;
+  padding-top: 25px;
+}
+  
+.footericon:hover {
+  opacity: 0.7;
+}
+
+
+
