@@ -40,17 +40,17 @@
       </div>
       <div id="sidebar">
         <div id="recentposts">
-          <span id="sidebartitle">Recent articles:</span>
+          <span id="sidebartitle">Recent posts:</span>
           <ul>
           {% for article in articles %}
-            {% if loop.index <= 8 %}
+            {% if loop.index <= 7 %}
           <li><a href="{{ SITEURL }}{{ ROOTDIR }}{{ article.url }}">{{article.title|striptags}}</a></li>
             {% endif %}
           {% endfor %}
           </ul>
         </div>
         <div id="allposts">
-          <a href="{{ SITEURL }}{{ ROOTDIR }}archives.html">All Articles</a>
+          <a href="{{ SITEURL }}{{ ROOTDIR }}archives.html">All Posts</a>
         </div>
         <div id="bycategory">
           <a href="{{ SITEURL }}{{ ROOTDIR }}categories.html">Browse By Category</a>

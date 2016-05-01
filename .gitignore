@@ -3,6 +3,8 @@ fonts/**
 **/*.zip
 images/**
 image_backup_no_watermark/**
+archive
+resume
 projects/secretmenu
 projects/**/*.csv
 projects/**/*.json
